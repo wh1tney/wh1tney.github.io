@@ -1,0 +1,91 @@
+/* Elements */
+body {
+	font-family: "HelveticaNeue-Thin";
+	background:#655e6a;
+	color:white;
+}
+
+ul {
+	list-style-type:none;
+}
+
+img {
+	position:relative;
+}
+
+h1 {
+		font-family: monospace;
+}
+
+/* IDs */
+#header {
+	text-align: center;
+	position:fixed;
+	height:75px;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 1000;
+}
+
+#container {
+	position:absolute;
+	margin: 75px auto auto auto;
+	left:0;
+	right:0;
+	top:0;
+	height:100%;
+}
+
+#sidebar {
+	position: fixed;
+	text-align: center;
+	border-left:2px dotted gray;
+	width:200px;
+	right:0;
+	margin:auto 25px auto auto;
+	padding:200px 0;
+	height:100%;
+}
+
+#content {
+	width:100%;
+	float: left;
+	margin:auto;
+}
+
+#footer {
+	text-align: center;
+	position:fixed;
+	height:50px;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+
+#image-caption {
+	color:white;
+	text-align:center;
+}
+
+/* Classes */
+.bounds {
+	background:#a47bbf;
+}
+
+/* Pseudo-classes */
+a:link {
+	color:white;
+}
+
+a:hover {
+	color:#f3c800;
+}
+
+a:visited {
+	color:white;
+}
+
+a:active {
+	color:#a47bbf;
+}
