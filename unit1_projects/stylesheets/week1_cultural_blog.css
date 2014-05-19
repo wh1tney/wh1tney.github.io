@@ -1,0 +1,121 @@
+/* Elements */
+body {
+	font-family:'Open Sans', sans-serif;
+	background:#655e6a;
+	color:white;
+}
+
+ul {
+	list-style-type:none;
+}
+
+img {
+	position:relative;
+}
+
+h1 {
+	font-family: 'Unica One', cursive;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* IDs */
+#header {
+	text-align: center;
+	position:fixed;
+	height:75px;
+	top:0;
+	left:0;
+	right:0;
+	z-index: 1000;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+
+}
+
+#container {
+	text-align:center;
+	position:absolute;
+	width:100%;
+	margin-bottom:50px;
+	left:0;
+	top:75px;
+}
+
+#content {
+	position:inherit;
+	width:60%;
+	float: right;
+	margin: 0 20% 30px 20%;
+	border-right:2px dotted gray;
+	padding:20px 0;
+}
+
+#sidebar {
+	position: fixed;
+	width:15%;
+	height:100%;
+	border-right:2px dotted gray;
+	left:0;
+	margin-left:25px;
+	padding:100px 50px 0 0;
+}
+
+#twitter-feed {
+	right: 0;
+	position:fixed;
+	margin: 10px 0 50px 0;
+}
+
+#footer {
+	text-align: center;
+	font-size: 12px;
+	position:fixed;
+	height:40px;
+	bottom: 0;
+	left:0;
+	right:0;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+#image-profile {
+	margin-left:30px;
+}
+
+/* Classes */
+.bounds {
+	background:rgba(86, 79, 93, 1);
+}
+
+.logo {
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.analysis {
+	margin: 30px;
+	padding:20px;
+	background: rgba(256, 256, 256, 0.05);
+	border-radius:25px;
+}
+
+.nested-link {
+	color:#f3c800;
+}
+
+/* Pseudo-classes */
+a:link {
+	color:white;
+}
+
+a:hover {
+	color:#02d3c5;
+}
+
+a:visited {
+	color:white;
+}
+
+a:active {
+	color:#a47bbf;
+}
