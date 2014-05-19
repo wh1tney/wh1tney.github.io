@@ -1,6 +1,7 @@
 /* Elements */
 
 body {
+		text-align: center;
 }
 
 /* IDs */
@@ -12,11 +13,10 @@ body {
 }
 
 #content {
-	width: 300px;
+	width: 50%;
 	padding: 10px;
 	border: none;
 	margin: auto;
-	float: right;
 }
 
 #sidebar {
@@ -25,23 +25,28 @@ body {
 	border: none;
 	margin-right: auto;
 	float: left;
+	top:50px;
 }
 
 #footer {
-	width: 200px;
+	position: absolute;
+	width: 100%;
 	padding: 10px;
 	border: 1px solid #ffffff;
 	margin-top: 10px auto auto auto;
+	bottom:0;
 }
 
 #block {
-	position: relative;
+	position: absolute;
 }
 
 #block-caption {
-	color: white;
-	position: absolute;
-	left: 0;
+	z-index: 1000;
+}
+
+#image {
+	text-align: center;
 }
 
 /* Classes */
@@ -53,11 +58,11 @@ body {
 /* Pseudo-classes */
 
 a:link {
-	color:yellow;
+	color:blue;
 }
 
 a:visited {
-	color:white;
+	color:darkblue;
 }
 
 a:hover {
