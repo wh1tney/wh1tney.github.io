@@ -42,6 +42,7 @@ body {
 }
 
 #block-caption {
+	position:relative;
 	z-index: 1000;
 }
 
