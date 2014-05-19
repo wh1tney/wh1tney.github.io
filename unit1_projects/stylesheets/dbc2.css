@@ -1,0 +1,69 @@
+/* Elements */
+
+body {
+}
+
+/* IDs */
+
+#header {
+	padding: 10px;
+	border: 1px solid #ffffff;
+	margin: 10px;
+}
+
+#content {
+	width: 300px;
+	padding: 10px;
+	border: none;
+	margin: auto;
+	float: right;
+}
+
+#sidebar {
+	width: 200px;
+	padding: 10px;
+	border: none;
+	margin-right: auto;
+	float: left;
+}
+
+#footer {
+	width: 200px;
+	padding: 10px;
+	border: 1px solid #ffffff;
+	margin-top: 10px auto auto auto;
+}
+
+#block {
+	position: relative;
+}
+
+#block-caption {
+	color: white;
+	position: absolute;
+	left: 0;
+}
+
+/* Classes */
+
+.important {
+	color:yellow;
+}
+
+/* Pseudo-classes */
+
+a:link {
+	color:yellow;
+}
+
+a:visited {
+	color:white;
+}
+
+a:hover {
+	color:orange;
+}
+
+a:active {
+	color:gray;
+}
