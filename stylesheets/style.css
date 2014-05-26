@@ -137,12 +137,12 @@ h6 {
 /*smartphones*/
 @media only screen and (max-width : 768px) {
 		header {
-		font-size: 3em;
+		font-size: 5em;
 	}
 
 	#secondary {
-	font-size: 3.5em;
-	padding-top: 30%;
+	font-size: 5em;
+	padding-top: 20%;
 }
 
 #tertiary {
