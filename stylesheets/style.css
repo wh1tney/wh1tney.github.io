@@ -153,6 +153,14 @@ h6 {
 	height:50%;
 }
 
+	#jump-scroll {
+	display: none;
+}
+
+#tertiary-button {
+	display:none;
+}
+
 }
 
 /*smartphones*/
