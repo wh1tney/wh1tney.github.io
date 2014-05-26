@@ -166,7 +166,7 @@ h6 {
 /*smartphones*/
 @media only screen and (max-width : 768px) {
 		header {
-			padding-top: 40%;
+			padding-top: 20%;
 		font-size: 5em;
 	}
 
@@ -203,7 +203,7 @@ h6 {
 
 @media only screen and (max-height : 650px) {
 		header {
-			padding-top: 40%;
+			padding-top: 20%;
 		font-size: 5em;
 	}
 
