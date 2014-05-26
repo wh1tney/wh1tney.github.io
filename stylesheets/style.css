@@ -137,8 +137,11 @@ h6 {
 /*tablets*/
 @media only screen and (max-width : 1024px) {
 		header {
-		font-size: 4.5em;
-		padding-top: 20%;
+		font-size: 5em;
+	}
+
+	.sub-section {
+		padding-top: 30%;
 	}
 
 	#jump-scroll {
@@ -154,8 +157,12 @@ h6 {
 
 	#secondary {
 	font-size: 5em;
-	padding-top: 20%;
 }
+
+	.sub-section {
+		padding-top: 30%;
+	}
+
 
 #tertiary {
 	padding: 5% 5%;
