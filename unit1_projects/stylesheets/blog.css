@@ -33,7 +33,7 @@ a {
 }
 
 p {
-	margin:5px;
+	margin:5%;
 	font-size: 1.5em;
 }
 
@@ -124,7 +124,7 @@ footer {
 .sandbox {
 	border-radius: 30px;
 	position:relative;
-	margin:40px auto;
+	margin:40px auto 20px auto;
 	width:30%;
 	height:300px;
 	background-color: rgba(86, 79, 93, .5);
