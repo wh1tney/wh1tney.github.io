@@ -198,6 +198,36 @@ h6 {
 }
 
 @media only screen and (max-height : 650px) {
+		header {
+			padding-top: 40%;
+		font-size: 5em;
+	}
+
+	#secondary {
+	font-size: 5em;
+}
+
+#tertiary {
+	padding: 5% 5%;
+}
+
+.blog {
+	position: static;
+	margin:15% auto;
+}
+
+#technical {
+		float:none;
+}
+
+#cultural {
+		float:none;
+}
+
+#tertiary-button {
+	padding-top: 12%;
+}
+
 	#jump-scroll {
 	display: none;
 }
