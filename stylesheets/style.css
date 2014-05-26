@@ -147,6 +147,10 @@ h6 {
 	#jump-scroll {
 	display: none;
 }
+
+#secondary {
+	height:30%;
+}
 }
 
 /*smartphones*/
