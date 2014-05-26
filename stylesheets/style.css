@@ -149,8 +149,13 @@ h6 {
 }
 
 #secondary {
-	height:30%;
+	height:40%;
 }
+
+#tertiary {
+	height:40%;
+}
+
 }
 
 /*smartphones*/
