@@ -145,11 +145,11 @@ h6 {
 }
 
 #secondary {
-	height:40%;
+	height:50%;
 }
 
 #tertiary {
-	height:40%;
+	height:50%;
 }
 
 }
@@ -163,11 +163,6 @@ h6 {
 	#secondary {
 	font-size: 5em;
 }
-
-	.sub-section {
-		padding-top: 30%;
-	}
-
 
 #tertiary {
 	padding: 5% 5%;
