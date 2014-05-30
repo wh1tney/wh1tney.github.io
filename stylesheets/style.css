@@ -13,7 +13,6 @@ header {
 	font-size: 7em;
 	font-weight: 300;
 	font-style: italic;
-	height:100%;
 	padding:5% 5%;
 }
 
@@ -197,16 +196,28 @@ h6 {
 }
 
 @media only screen and (max-height : 650px) {
+
+	.sub-section {
+		height:100%;
+	}
+
 		header {
 			padding-top: 20%;
 		font-size: 5em;
 	}
 
+	#main {
+		top:0;
+		position:relative;
+	}
+
 	#secondary {
+		top:0;
 	font-size: 5em;
 }
 
 #tertiary {
+	top:0;
 	padding: 5% 5%;
 }
 
