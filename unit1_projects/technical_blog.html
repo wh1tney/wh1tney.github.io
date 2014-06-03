@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<title>Technical Blog</title>
+</head>
+<body>
+	<header class="bounds">
+		<h1>TECHNOLOGY</h1>
+	</header>
+	<div id="container">
+		<div id="week3" class="post">
+			<h2>JavaScript</h2>
+			<div class="date">Posted Sunday June 1st, 2014</div>
+
+			Why has JavaScript taken over the web. Here are a few things to consider.
+			<ul>
+				<li>It has a simple syntax, making it a fairly easy language to learn</li>
+				<li>No plugins are required to be installed</li>
+				<li>JS is more lightweight than Flash and Java</li>
+				<li>Several libraries that add useful features to the language are available </li>
+			</ul>
+
+			Aside from being popular, JavaScript is a really great language. With it, we can do a number of things...
+			<ul>
+				<li>Make websites respond to user interaction</li>
+				<li>Display pop up messages</li>
+				<li>Organize and present data</li>
+				<li>Extra browser functionality with addons</li>
+				<li>...even build apps and games!</li>
+			</ul>
+
+			While popular and awesome, JavaScript also has limitations. If you are looking to do the following with JavaScript, look elsewhere:
+			<ul>
+				<li>Directly access files on a user's system</li>
+				<li>Write directly to files on a server (without a little help)</li>
+				<li>Access databases</li>
+				<li>Close a window it did not open</li>
+				<li>Access websites hosted on another domain</li>
+			</ul>
+		</div>
+
+		<div id="week2" class="post">
+			<h2>CSS Positioning</h2>
+			<div class="date">Posted Sunday May 25th, 2014</div>
+
+				A hard thing to understand. Let's make it easy.<br><br>Here are three balloons stacked in a grey bin.<br>The balloons have default positions of <em>static</em>.<br>These pretty balloons ain't moving.
+					<div class="sandbox">
+						<div class="box box1"></div>
+						<div class="box box2"></div>
+						<div class="box box3"></div>
+					</div><caption>CSS:<br>#green-balloon<br>{ position:static; }</caption>
+				
+				<br><br>
+
+				Now let's make the position of the green balloon <em>absolute</em>.
+					<div class="sandbox">
+						<div class="box box1"></div>
+						<div class="box box2" style="position:absolute;"></div>
+						<div class="box box3" ></div>
+					</div><caption>CSS:<br>#green-balloon<br>{ position:absolute; }</caption>
+				
+				<br><br>
+
+				Wait a minute! What just happened? We "pulled" the green balloon out of the flow. We can literally position it <em>absolutely</em> anywhere &#8211; even on top of or underneath other balloons in the bin.
+					<div class="sandbox" style="float:left; margin:10% auto;">
+						<div class="box box1"></div>
+						<div class="box box2" style="position:absolute; top:20%; right:10%;"></div>
+						<div class="box box3" ></div>
+					</div>
+					<div class="sandbox" style="float:right; margin:5% auto;">
+						<div class="box box1"></div>
+						<div class="box box2" style="position:absolute; top:50%; right:10%; z-index:-1;"></div>
+						<div class="box box3" ></div>
+					</div>
+					<div class="sandbox">
+						<div class="box box1"></div>
+						<div class="box box2" style="position:absolute; bottom:0; left:5%;"></div>
+						<div class="box box3" ></div>
+					</div>
+
+				<br><br>
+
+				This brings us to the <em>relative</em> position. Guess which div on this page has been <em>relative</em> the entire time we've been playing with balloons?
+					<div class="sandbox">
+					</div><caption><br>#grey-bin<br>{ position:relative; }</caption>
+
+					<p>That's right, the grey bin! The bin that is holding our balloons must have a position of <em>relative</em> or <em>absolute</em> for any of this balloon floating nonsense to work. Why? Because this "limits the scope of absolutely positioned child elements" &#8211; in plain English, it forces our balloons to be contained within it. Otherwise, when we position our green balloon to be <em>absolute</em>, it would go flying to its closest<em> non-static</em> parent, which may be an unintended div in your webpage, or the page itself!
+
+					<br><br><em>Fixed</em> positioning is a bit easier to explain.<br>Check out the header of this page (hint: it has the words "TECHNICAL THINGS IN A TECHNICAL BLOG" in it).<br>The position of this div is <em>fixed</em>, meaning the header is stuck there forever and ever. Go ahead, scroll. Yep...still there.
+
+					<br><br>If you would like to know how elements interact when positioned, or prefer an explanation without balloons and bins, check out <a href="http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" title="Absolute, Relative, Fixed Positioning: How Do They Differ?">this site</a>.</p>
+
+		</div>
+
+		<div id="week1" class="post">
+			<h2>Websites That Are Cool</h2>
+			<div class="date">Posted Sunday May 18th, 2014</div>
+
+			<div>
+				<a href="http://www.soundcloud.com" title="SoundCloud" target="_blank"><img class="logo" src="images/soundcloud.png" alt="SoundCloud"></a><br>
+				I am on SoundCloud 78% of all waking hours. 86% of open browser tabs are new SoundCloud music discoveries.
+				I even curate a <a href="http://www.thunderhustle.com" title="Click Here Right Now For Amazingly Dope Playlists Full of Magical Sounds!!!"><span class="nested-link">music blog</span></a> of crazy good SoundCloud playlists.<br>
+				But let's talk about design and UX.<br><br>
+				I love the SoundCloud design. It could use moar orange.<br>
+				But the layout (navigation) of the site is simple and I love simple UI.<br><br>
+				I hate the SoundCloud user experience. Discovering music aint easy.<br>
+				Each tab on the profile settings page annoyingly opens in a new window.<br>
+				Logging out of a user account on one browser tab subsequently logs the user out of ALL OPEN TABS.<br>
+				It makes me want to cry.<br>
+				Does any of that make sense? No? OK, on to <a href="http://www.twitter.com/wjoba" title="Pay No Attention to These Tweets" target="_blank"><span class="nested-link">Twitter</span></a>.<br>
+				
+				<a href="http://www.twitter.com" title="Twitter" target="_blank"><img class="logo" src="images/twitter.png" alt="Twitter"></a>
+
+					Who doesn't love The Twitter?<br><br>
+					The website is aesthetically appealing, easy to navigate, and is starting to look like Facebook...<br>
+					which is great for <a href="https://twitter.com/wjoba/status/468161930465529856" title="The Book of Faces" target="_blank"><span class="nested-link">people who don't use Facebook.</span></a><br><br>
+					The UX is great, by sheer design of the service.<br>
+					You can only accomplish an average of 5 useful things when using Twitter, which makes for a dead simple user experience.<br><br>
+					Also, infinite scroll, ftw. I still gotta figure out how that works. AJAX?
+				
+				<a href="http://www.quora.com" title="Quora" target="_blank"><img class="logo" src="images/quora.jpg" alt="Quora"></a>
+				
+					Quora. Because it is important to know <a href="http://www.quora.com/Life/How-is-chess-similar-to-life" title"Hint: They are both hard." target="_blank"><span class="nested-link">how life is similar to a game of chess.</span></a><br><br>
+					Quora is for asking and answering questions, both trivial and life-changing.<br>
+					There are subtle things about the design and user experience that make this obvious, e.g.<br>
+					when the site is launched, the cursor is already neatly placed in the search box like <a href="http://www.google.com" title="NSA. Just Kidding." target="_blank"><span class="nested-link">Google.</span></a><br><br>
+					Cool.<br><br>
+					Again, simplicity. I swear by it. And this site definitely has it.<br>
+					The design eliminates the unnecessary and makes it really easy to perform basic functions<br>
+					such as asking a question, upvoting an answer, following a user, etc.<br>
+					A bit strange, but I am grossly intrigued by the fact that this site has almost no color<br>
+					in its design.<br><br>
+					This site will forever remain my homepage. Until I decide to change it.<br>
+			</div>
+
+		</div>
+
+		<div id="sidebar">
+			<img id="image-profile" src="images/me.png" alt="Whitney O'Banner">
+			<ul>
+				<h3>
+				<li><a href="http://www.github.com/wh1tney" title="">GitHub</a></li><br>
+				<li><a href="http://www.twitter.com/wjoba" title="">Twitter</a></li><br>
+				<li><a href="mailto:wobanner@gmail.com" title="">Email</a></li><br>
+				</h3>
+			</ul>
+		</div>
+
+	</div>
+	<footer>
+		<p style="margin:0; padding:10px; font-size:12px;">&copy; 2014 W. O'Banner. All Rights Reserved.</p>
+	</footer>
+</body>
+</html>
