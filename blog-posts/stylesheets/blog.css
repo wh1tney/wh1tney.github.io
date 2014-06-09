@@ -1,0 +1,188 @@
+/* Elements */
+html {
+	height:100%;
+}
+
+body {
+	height:100%;
+	font-family:'Roboto', sans-serif;
+	background:#f0f2f3;
+	color:rgba(0,0,0,0.75);
+}
+
+ul {
+	font-size: .7em;
+	list-style-type:none;
+	padding: 0;
+	margin: 6% 0;
+}
+
+img {
+	margin:auto;
+	position:relative;
+}
+
+h1 {
+	text-align: left;
+	font-family: 'Abel', sans-serif;
+}
+
+h2 {
+	margin: 0px;
+	font-size: 2em;
+	font-weight: 600;
+}
+
+a {
+	text-decoration:none;
+}
+
+header {
+	margin-left: 15%;
+	padding:10px;
+	text-align: center;
+	height:80px;
+	top:30px;
+	left:0;
+	right:0;
+	z-index: 1000;
+	color:#888;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	position:relative;
+	height:50px;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+
+/* IDs */
+
+#container {
+	left:0;
+	position:relative;
+	margin: 0 15%;
+}
+
+
+
+#sidebar {
+	text-align: center;
+	position: fixed;
+	width:20%;
+	right:0;
+	padding:5% 2% 0 2%;
+	top:25%;
+}
+
+#twitter-feed {
+	position: fixed;
+	width:15%;
+	height:70%;
+	padding:5% 2%;
+	right:0;
+}
+
+#image-profile {
+	width:50%;
+}
+
+/* Classes */
+
+.date {
+	font-size: .5em;
+	margin: 5px 0 30px 4px;
+}
+
+.post {
+	width:80%;
+	margin: 0 10px 70px 10px;
+	padding: 2% 4% 5% 4%;
+	bottom:40px;
+	background: #fff;
+	font-size: 1.5em;
+	box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.25);
+}
+
+.quote {
+	margin:10% 10%;
+	font-size:.7em;
+	text-align: center;
+}
+
+.note {
+	margin:5% 10%;
+	font-size:.7em;
+	text-align: center;
+}
+
+.box {
+	border-radius: 50px;
+	box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.5);
+	margin: auto;
+	width:100px;
+	height:100px;
+}
+
+.box1 {
+	background-color: rgba(161,110,202,.75);
+}
+
+.box2 {
+	background-color: rgba(26,188,156,.75);
+}
+
+.box3 {
+	background-color: rgba(243,200,0,.75);
+}
+
+.sandbox {
+	border-radius: 30px;
+	position:relative;
+	margin:40px auto 20px auto;
+	width:30%;
+	height:300px;
+	background-color: rgba(86, 79, 93, .5);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	border:1px solid rgba(58, 58, 58, 0.2);
+}
+
+.bounds {
+	/*background:rgba(86, 79, 93, 1);*/
+}
+
+.logo {
+	margin: 50px 35% 50px 35%;
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.analysis {
+	margin: 30px;
+	padding:20px;
+	background: rgba(256, 256, 256, 0.05);
+	border-radius:25px;
+}
+
+.nested-link {
+	color:#f3c800;
+}
+
+/* Pseudo-classes */
+a:link {
+	color:#009494;
+}
+
+a:visited {
+	color: #009494;
+}
+
+a:hover {
+	color:#02d3c5;
+}
+
+a:active {
+	color:#a47bbf;
+}
