@@ -12,26 +12,36 @@
 	</header>
 	<div id="container">
 		<div id="week3" class="post">
-			<h2>&:huh?</h2>
+			<h2>The Ruby Pretzel</h2>
 			<div class="date">Posted Sunday June 8th, 2014</div>
 				This week in JavaScript, I was introduced to this beast:
-			<div class="note">string_array = array.map(&:to_s)</div>
-			At first, heads explode. But to understand this gibberish requires a basic understanding of the JavaScript method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map" title="RubyDocs">map</a></strong>.
+				
+			<div class="note">array_of_strings = array.map(&:to_s)</div>
+			
+			At first, heads exploded. What the heck is that pretzel colon thingy? To understand this gibberish requires a basic understanding of the JavaScript method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map" title="RubyDocs">map</a></strong>.
 			<div class="note">map { |item| block } → new_ary</div>
 			<div class="note">The builtin method <strong>map</strong> is an instance method for Ruby arrays and hashes. In this post, we will be referring to the method that operates on arrays.</div>
 			
-			An array object calls map, which says "hey, gimme a block of code and I will execute it on every element in this array." It iterates through each item in the array, executing the code in the block and storing the new value of the item in a brand new array (if we don't want to create a new array, but simply wish to modify the old one, use destructive method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map-21" title="RubyDocs">map!</a></strong> with <strong>!</strong> on the end). It is important to note that the method <strong>map</strong> without the bang character on the end returns a <em>new array</em>.
+			An array object calls map, which says "hey, gimme a block of code and I will execute it on every element in this array." It iterates through each item in the array, executing the code in the block and storing the new value of the item in a brand new array (if we don't want to create a new array, but simply wish to modify the old one, we would use destructive method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map-21" title="RubyDocs">map!</a></strong> with <strong>!</strong> on the end).
+						
+			<br><br>
+			So what about that cryptic code from earlier?
+			
+			<div class="note">array_of_strings = array.map(&:to_s)</div>
+			
+			I'm glad you asked. This accomplishes the exact same thing. It is simply shorthand provided by Ruby (thank you, Ruby) to run a block of code on every single item in an array. To better understand what is happening, let's consider what is being passed into map...the operator <strong>&</strong> and the symbol <strong>:to_s</strong>.
+			
+			<br><br>			
+			The <strong>&</strong>, or <em>unary ampersand operator</em>, makes our code equivalent to the following:
+			
+			<div class="note">array_of_strings = array.map(&:to_s.to_proc)</div>
+			
+			Here we have the method <strong><a href="http://www.ruby-doc.org/core-1.9.3/Symbol.html#method-i-to_proc" title="RubyDocs (to_proc)">to_proc</a></strong> being called on the symbol <strong>:to_s</strong>. This method returns a Proc object, which (for the brevity of this post) is just a block of Ruby code that performs specific operations. For example, the code `:to_s.to_proc` shown above returns <strong>a block of code that converts given input to a string</strong>. Our handy unary ampersand operator then says "great! now run this block of code on every item in the list." And it does.
 			
 			<br><br>
-			
-			That's all there is to it. But what about the code from earlier?
-			
-			<div class="note">string_array = array.map(&:to_s)</div>
-			
-			This is simply a shortcut Ruby gives us for map. (Thank you, Ruby.) First, let's consider what is actually being passed into map, <strong>&</strong> and <strong>:to_str</strong>. The <strong>&</strong> operator says...
+			Smells a lot like the regular map method, with a little syntactic sugar, huh? That's because it is. Please use and enjoy.
 			
 			<br><br>
-			
 			Refer to <a href="http://stackoverflow.com/questions/1217088/what-does-mapname-mean-in-ruby" title="StackOverflow">this post</a> for more information.
 		</div>
 
