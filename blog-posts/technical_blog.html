@@ -12,38 +12,132 @@
 	</header>
 	<div id="container">
 		<div id="week5" class="post">
-			<h2>Classes</h2>
-			<div class="date">Posted Sunday June 8th, 2014</div>
-				This week in JavaScript, I was introduced to this beast:
+			<h2>Classy Food Trucks</h2>
+			<div class="date">Posted Sunday June 15th, 2014</div>
+			<div class="note">
+			Where there's food, there's a real world model for Ruby classes.
+			</div>
+				<a href="http://offthegridsf.com/" title="offthegridsf.com">Off The Grid SF</a> is an experience that brings street food vendors and the communities they serve together in the city of San Francisco. Vendors prepare and sell food from full-service trucks, delighting foodies and wanderers alike with everything from kabobs to burritos to organic ice cream.
+				<br><br>Let's examine the Off The Grid experience and model it using Ruby <strong>classes</strong>. 
 				
-			<div class="note">array_of_strings = array.map(&:to_s)</div>
-			
-			At first, heads exploded. What the heck is that pretzel colon thingy? To understand this gibberish requires a basic understanding of the JavaScript method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map" title="RubyDocs">map</a></strong>.
-			<div class="note">map { |item| block } → new_ary</div>
-			<div class="note">The builtin method <strong>map</strong> is an instance method for Ruby arrays and hashes. In this post, we will be referring to the method that operates on arrays.</div>
-			
-			An array object calls map, which says "hey, gimme a block of code and I will execute it on every element in this array." It iterates through each item in the array, executing the code in the block and storing the new value of the item in a brand new array (if we don't want to create a new array, but simply wish to modify the old one, we would use destructive method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map-21" title="RubyDocs">map!</a></strong> with <strong>!</strong> on the end).
-						
-			<br><br>
-			So what about that cryptic code from earlier?
-			
-			<div class="note">array_of_strings = array.map(&:to_s)</div>
-			
-			I'm glad you asked. This accomplishes the exact same thing. It is simply shorthand provided by Ruby (thank you, Ruby) to run a block of code on every single item in an array. To better understand what is happening, let's consider what is being passed into map...the operator <strong>&</strong> and the symbol <strong>:to_s</strong>.
-			
-			<br><br>			
-			The <strong>&</strong>, or <em>unary ampersand operator</em>, makes our code equivalent to the following:
-			
-			<div class="note">array_of_strings = array.map(&:to_s.to_proc)</div>
-			
-			Here we have the method <strong><a href="http://www.ruby-doc.org/core-1.9.3/Symbol.html#method-i-to_proc" title="RubyDocs (to_proc)">to_proc</a></strong> being called on the symbol <strong>:to_s</strong>. This method returns a Proc object, which (for the brevity of this post) is just a block of Ruby code that performs specific operations. For example, the code `:to_s.to_proc` shown above returns <strong>a block of code that converts given input to a string</strong>. Our handy unary ampersand operator then says "great! now run this block of code on every item in the list." And it does.
-			
-			<br><br>
-			Smells a lot like the regular map method, with a little syntactic sugar, huh? That's because it is. Please use and enjoy.
-			
-			<br><br>
-			Refer to <a href="http://stackoverflow.com/questions/1217088/what-does-mapname-mean-in-ruby" title="StackOverflow">this post</a> for more information.
-		</div>
+				<br><br>
+				We will start by modeling a portion of Off the Grid, a collection of several different food trucks (there are actually <a href="http://offthegridsf.com/vendors#food" title="Vendors-Food">over 150</a> OTG food vendors):
+				
+				<div class="parking-lot">
+					<div class="truck">
+						<ul>
+							<li>
+							Curry Up Now
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;
+							</li>
+							$11
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							KoJa Kitchen
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$8
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							Garden Creamery
+							</li>
+							<li>
+							&#9733;&#9733;
+							</li>
+							<li>
+							$9
+							</li>
+						</ul>
+					</div>	
+					<div class="truck">	
+						<ul>
+							<li>
+							Kung Fu Tacos
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$10
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							Lobsta Truck
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$13
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+								Me So Hungry
+							</li>
+							<li>
+								&#9733;&#9733;
+							</li>
+							<li>
+								$11
+							</li>
+						</ul>
+					</div>	
+				</div>
+				<br><br>
+				What do you notice? Let's think about this. Though there are several different vendors, each with its own distinct <em>values</em> for name, average rating, and average price...information for each vendor is stored and presented with the exact same <em>structure</em>.
+				<div class="parking-lot">
+					<div class="truck" style="float:none; margin:auto;">
+					<ul>
+					<li>
+						Truck name
+					</li>
+					<li>
+					Avg Rating
+					</li>
+					Avg Price
+					<li>
+					</ul>
+					</div>
+				</div>
+				So how do we model this structure in code? We use a <strong>class</strong>. Let's stick with our example and create class Vendor.<br>
+				<img class="code" src="images/vendorclass1.png" alt="Vendor class code snippet">
+				
+				Remember, it doesn't matter if the vendor sells hot dogs or enchiladas, some basic properties are shared by every single vendor. Let's add these shared properties, or <strong>instance variables</strong>, to our class.
+				
+				<img class="code" src="images/vendorclass2.png" alt="Instance variables code snippet">
+				
+				Now we can easily create multiple vendors with a specific name, rating, and price. When a new food truck vendor joins Off the Grid, we can use our Vendor class to create a new object and specify its properties.
+				
+				<img class="code" src="images/vendorclass3.png" alt="Sample Vendor object">
+
+				 Simple. You see, a class is like a blueprint. Objects that share the same blueprint can be created from the same class. Let's look at the creation of more Vendor objects.
+				 
+				 <img class="code" src="images/vendorclass4.png" alt="Sample Vendor object">
+				 
+				 The properties that these objects have in common (prefixed with an <em>@</em> symbol, i.e. @name, @rating, and @price) are called <strong>instance variables</strong>. Note, properties are common between objects &ndash; not the <em>values</em> of those properties. Though the objects are created from the same class, instance variables store values specific to each object, e.g. Chicken and Waffles has a 5-star rating while Falafel Street has a 2-star rating. 
+				 
+				 <br><br>
+				 Stay tuned for more Off the Grid madness. In Part 2 of this post, we will discuss how to use <strong>instance methods</strong> to manipulate instance variables.
+				</div>
 
 	
 		<div id="week4" class="post">
