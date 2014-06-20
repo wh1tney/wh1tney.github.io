@@ -11,8 +11,121 @@
 		<h1>TECHNOLOGY</h1>
 	</header>
 	<div id="container">
+		<div id="week6" class="post">
+			<h2>Classy Food Trucks (Part 2)</h2>
+			<div class="date">Posted Sunday June 22nd, 2014</div>
+			
+				Last week, we learned how to use <strong>classes</strong> and <strong>instance variables</strong> in Ruby by digging into the wonderful world of <a href="#week5">food trucks</a>. This time around, we will be exploring the bits of code, or <em>instance methods</em>, that manipulate these instance variables.
+				
+				<br><br>
+				
+				Let's begin by revisiting our Off The Grid food vendors:
+				
+				<div class="parking-lot">
+					<div class="truck">
+						<ul>
+							<li>
+							Curry Up Now
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;
+							</li>
+							$11
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							KoJa Kitchen
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$8
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							Garden Creamery
+							</li>
+							<li>
+							&#9733;&#9733;
+							</li>
+							<li>
+							$9
+							</li>
+						</ul>
+					</div>	
+					<div class="truck">	
+						<ul>
+							<li>
+							Kung Fu Tacos
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$10
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+							Lobsta Truck
+							</li>
+							<li>
+							&#9733;&#9733;&#9733;&#9733;
+							</li>
+							<li>
+							$13
+							</li>
+						</ul>
+					</div>
+					<div class="truck">	
+						<ul>
+							<li>
+								Me So Hungry
+							</li>
+							<li>
+								&#9733;&#9733;
+							</li>
+							<li>
+								$11
+							</li>
+						</ul>
+					</div>	
+				</div>
+
+				We created a Ruby <strong>class</strong> to model these food vendors.
+				
+				<img class="code" src="images/vendorclass2.png" alt="Instance variables code snippet">
+				
+				But what if we wanted the vendors to actually <em>do</em> something, like report their average rating? We need a way to send a <strong>message</strong> to a vendor instance like "Hey! Tell us your average rating..." &ndash; to which the vendor would reply "My average rating is 4 stars." Good news, we can do this with <strong>instance methods</strong>!
+				
+				<br><br>
+				
+				Instance methods perform bits of logic and/or operate on instance variables within a given class. Let's jump right into an example with code:
+				
+				<img class="code" src="images/vendorclass5.png" alt="Instance method code snippet">
+				
+				We have a new instance method <em>report_rating</em>. What does this method do? Well, it does exactly what we just described...it prints a vendor's rating by accessing the instance variable <em>@rating</em>. That's it. Nobody said instance methods have to be complicated (though they certainly can be).
+				
+				<br><br>
+				
+				Now, every time we call this method on a vendor instance, the vendor examines its own rating and prints it out!
+				
+				<br><br>
+				To conclude, classes contain instance variables that represent an object's attributes (e.g. @rating) and instance methods that can perform operations on those attributes (e.g. the report_rating method outputs the rating). Classes can also contain <strong>class variables</strong> and <strong>class methods</strong>, but we will save these topics for another blog post.
+				
+		</div>
+
 		<div id="week5" class="post">
-			<h2>Classy Food Trucks</h2>
+			<h2>Classy Food Trucks (Part 1)</h2>
 			<div class="date">Posted Sunday June 15th, 2014</div>
 			<div class="note">
 			Where there's food, there's a real world model for Ruby classes.
