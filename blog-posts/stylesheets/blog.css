@@ -15,6 +15,7 @@ ul {
 	list-style-type:none;
 	padding: 0;
 	margin: 6% 0;
+	text-align: center;
 }
 
 img {
@@ -30,7 +31,8 @@ figcaption {
 
 h1 {
 	text-align: left;
-	font-family: 'Abel', sans-serif;
+	margin-left:10px;
+	float:right;
 }
 
 h2 {
@@ -44,15 +46,33 @@ a {
 }
 
 header {
-	margin-left: 15%;
+	position:relative;
+	margin:0px 20% 100px;
 	padding:10px;
-	text-align: center;
+	text-align: left;
 	height:80px;
 	top:30px;
 	left:0;
 	right:0;
 	z-index: 1000;
-	color:#888;
+	font-family: 'Abel', sans-serif;
+	font-size:1.2em;
+
+}
+
+header h3 {
+	color:#00dac8;
+	margin-bottom:2px;
+	font-size:28px;
+}
+
+header a:link {
+	color:rgba(115,115,115,1);
+	text-transform: inherit;
+}
+
+header a:hover {
+	color:rgba(85,85,85,1);
 }
 
 footer {
@@ -70,7 +90,7 @@ footer {
 #container {
 	left:0;
 	position:relative;
-	margin: 0 15%;
+	margin: 0 20%;
 }
 
 
@@ -78,11 +98,23 @@ footer {
 #sidebar {
 	text-align: center;
 	position: fixed;
-	width:20%;
-	right:0;
-	padding:5% 2% 0 2%;
-	top:25%;
+	width:10%;
+	left:0;
+	padding-left:7%;
+ 	top:150px;
+
 }
+
+#sidebar ul {
+	text-align: right;
+	font-size: large;
+	margin-top: 60px;
+}
+
+#sidebar li {
+	color:rgba(185, 185, 185,1);
+}
+
 
 #twitter-feed {
 	position: fixed;
@@ -207,7 +239,7 @@ footer {
 
 /* Pseudo-classes */
 a:link {
-	color:#009494;
+	color:#07c3b4;
 }
 
 a:visited {
@@ -215,9 +247,16 @@ a:visited {
 }
 
 a:hover {
-	color:#02d3c5;
+	color:rgba(0,212,198,0.89);
+	transition: color 0.5s;
 }
 
 a:active {
 	color:#a47bbf;
+}
+
+@media only screen and (max-width:480px) {
+	#sidebar {
+		display: none;
+	}
 }
