@@ -131,6 +131,10 @@ footer {
 
 /* Classes */
 
+.prettyprint {
+/* 	text-align: center; */
+}
+
 .date {
 	font-size: .5em;
 	margin: 5px 0 30px 4px;

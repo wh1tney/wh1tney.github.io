@@ -4,6 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/blog.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 	<title>Technology</title>
 </head>
 <body>
@@ -29,7 +30,103 @@
 	<div id="container">
 		
 		<section>
+		
+			<div id="week6" class="post">
+				<h2>Procs, Blocks, & Lambdas</h2>
+				<div class="date">Posted Sunday June 22nd, 2014</div>
+				Since we have already covered <a href="#week5a">classes in Ruby</a> and <a href="#week4">skimmed the surface of Procs</a>, it is time to discuss blocks, Procs, and lambdas in more depth. Get ready to engage.
+				
+				<h4>Blocks</h4>
+				<div class="note">A Ruby block is just a bit of code that can be executed. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1" title="Codecademy Blocks">source</a>)</div>
+				
+				Blocks of code can be used in Ruby to perform actions on data. Often, you will see blocks passed to method calls in order to operate on the receiver of the message. For example, if I want to <em>print my name</em> 10 times, I can pass instructions to <em>print my name</em> as a <strong>block</strong> to the Integer method <strong>times</strong> like so:
+				
+				<br><br>
+				<code class="prettyprint linenums">10.times { puts "Whitney" }</code>
+				<br>
+				
+				This block of code gets executed 1, 2, 3, ... 10 times! Pretty self-explanatory. But what about passing data to the block? For this, let's use another example, that iterates through a list of sauces because...who doesn't like sauce?
+				
+				<br><br>
+				<code class="prettyprint linenums">["Sriracha", "Tapatio", "Soy"].each do |sauce|<br>puts "#{sauce} may be the best sauce I've ever had."<br>end</code>
+				<br>
+				
+ Forgive the indentation, but take a good look at this code. As we pass through the array, we funnel data &mdash; i.e. <em>sauce</em> &mdash; to our block, printing out our saucy delight at each pass. 
+ 
+ <br><br>
+ 
+ Because a block is not an object in Ruby, we need another way to <em>save</em> blocks of code to a variable. This is where Procs come in.
+				
+				<h4>Procs</h4>
+				<div class="note">You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/1/1" title="Codecademy Procs">source</a>)</div>
+				
+				A Proc is a Ruby class that can be used to create objects that are just like blocks. Why is this useful? Well, it allows us to save these block-like objects to named variables which means we can use them multiple times throughout our code. Let's use our previous example of printing my name because you know you want to.
+				
+				<br><br>
+				<code class="prettyprint linenums">say_my_name = Proc.new { puts "Whitney" }</code>
+				<code class="prettyprint linenums">10.times(&say_my_name)</code>
+				<br>
+				
+				As you can see, we created a new Proc object and gave it a block as an argument. Now we have a named block of instructions to pass around, and an easy way to make our code resemble a <a href="https://www.youtube.com/watch?v=sQgd6MccwZc&feature=kp" title="Destiny's Child - Say My Name">Destiny's Child hit song</a>:
+				
+				<br><br>
+				<code class="prettyprint linenums">say_my_name = Proc.new { puts "Whitney" }</code>
+				<code class="prettyprint linenums">10.times(&say_my_name)</code>
+				<code class="prettyprint linenums">5.times(&say_my_name)</code>
+				<br>
+				
+				(Note: <strong>&amp;</strong> is used to convert the proc object into a block before it is passed to a method that expects a block.)
 
+				<h4>Lambdas</h4>
+				<div class="note">[With] the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/1" title="Codecademy Blocks">source</a>)</div>
+				
+				Essentially, lambdas and Procs are somewhat interchangeable. Rewriting our example code using lambdas would look like the following:
+				
+				<br><br>
+				<code class="prettyprint linenums">say_my_name = lambda { puts "Whitney" }</code>
+				<code class="prettyprint linenums">10.times(&say_my_name)</code>
+				<br>
+				
+				Did you try running the code above? Well, you should have because you will notice that it fails! The reason it fails is due to a distinct difference between Procs and lambdas.
+				
+				<div class="note">[A] lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" title="Codecademy Lambdas">source</a>)</div>
+				
+				Running the code above throws an error because when we call the <strong>times</strong> method with a block of code, we are actually passing the current iteration (1-10) to that block. If we do not account for this argument in our lambda, it will raise an <em>ArgumentError</em> (which would not happen if we used a Proc object). Our lambda should catch this argument and look more like the following:
+
+				<br><br>
+				<code class="prettyprint linenums">say_my_name = lambda {|iteration| puts "Whitney"}</code>
+				<code class="prettyprint linenums">10.times(&say_my_name)</code>
+				<br>
+				
+				Ah, that's better. But there is one more distinct difference between a Proc object and a lambda that we have not yet discussed.
+				
+				<div class="note">[When] a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" title="Codecademy Lambdas">source</a>)</div>
+
+				Let's see this in action by quoting <a href="http://en.wikipedia.org/wiki/Shaft_(1971_film)" target="_blank" title="Wikipedia - Shaft">Shaft</a> and using the <a href="http://www.ruby-doc.org/core-2.1.2/Proc.html#method-i-call" target="_blank" title="Ruby Docs - Proc#call">call</a> method with both Proc objects and lambdas.
+				
+				<br><br>
+				<code class="prettyprint linenums">def shaft_lambda<br>
+				  bio = Proc.new {return "He's a bad mother&ndash;" }<br>
+				  bio.call<br>
+				  puts "Shut yo mouth!"<br>
+				  end</code>
+				<br>
+				
+				<code class="prettyprint linenums">def shaft_lambda<br>
+				  bio = lambda {return "He's a bad mother&ndash;" }<br>
+				  bio.call<br>
+				  puts "Shut yo mouth!"<br>
+				  end</code>
+				<br>
+				
+				Try the code above and see if it prints what you expect. As you can see, when the Proc object returns, the rest of the method does not get executed (nearly leaving us with some obscene output). However, when the lambda returns, the method continues, politely telling us to shut our mouths. Neat.
+				
+				<br><br>
+				Wanna learn more about Procs, blocks, and lambdas? Try <a href="http://www.reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/" target="_blank" title="Understanding Ruby Blocks, Procs and Lambdas">this post</a> or go interactive with Codecademy's awesome <a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1" target="_blank" title="Codecademy - Blocks, Procs, and Lambdas">tutorial.</a>
+				
+				<br><br>Happy learning :)
+				
+			</div>
 			
 			
 			<div class="post">
