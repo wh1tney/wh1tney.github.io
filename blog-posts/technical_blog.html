@@ -26,7 +26,6 @@
 	</header>
 	<section>
 		<div id="sidebar">
-	<!-- 			<img id="image-profile" src="images/me.png" alt="Whitney O'Banner"> -->
 		<ul>
 			<li>Read More:<br><a href="http://wh1tney.github.io/blog-posts/cultural_blog.html" title="Cultural Blog">Cultural Blog</a></li><br>
 			<li>Find Me:<br><a href="http://www.github.com/wh1tney" target="_blank" title="Github">Github</a></li>
@@ -40,6 +39,29 @@
 	<div id="container">
 		
 		<section>
+		
+			<div id="week7" class="post">
+				<h2>SQL Injection</h2>
+				<div class="date">Posted Sunday June 29th, 2014</div>
+					<img src="images/xkcd.png" alt="xkcd comic">
+					<div class="note">
+					SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). (<a href="http://en.wikipedia.org/wiki/SQL_injection" title="Wikipedia - SQL Injection">source</a>)
+					</div>
+					
+					<h4>What is it?</h4>
+					SQL injection is a common web hack, typically used to gain access to a backend database. It is made possible as a result of an improperly coded website that allows SQL statements to be inserted into input fields, querying the database itself.
+					
+					<div class="note">SQL Injection vulnerabilities provide the means for a hacker to communicate directly to the database. (<a href="https://www.acunetix.com/websitesecurity/sql-injection" title="Acunetix">source</a>)</div>
+					
+					For example, a hacker could generate a SQL query to retrieve all usernames and passwords in a database. When this query is inserted into an input field, such as a login field in a web application, it can be executed and the hacker could gain access to what should be secure information. 
+					
+					<h4>How can we prevent it?</h4>
+					SQL injection can be prevented by properly <em>sanitizing</em> data input. This means that the input is made invulnerable before being sent with the SQL query to the database. Before the query is sent to the database, it should be validated in some way. The <a href="http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php" title="StackOverflow - How can I prevent SQL-injection in PHP?">most popular response on StackOverflow</a> for preventing an attack is the following:
+					
+					<div class="note">Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters.</div>
+										
+					For even more information on how to prevent SQL injection, check out <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet" title="SQL Injection Prevention Cheat Sheet">this cheat sheet</a>.
+			</div>
 		
 			<div id="week6" class="post">
 				<h2>Procs, Blocks, & Lambdas</h2>
@@ -510,9 +532,9 @@
 	
 						That's right, the grey bin! The bin that is holding our balloons must have a position of <em>relative</em> or <em>absolute</em> for any of this balloon floating nonsense to work. Why? Because this "limits the scope of absolutely positioned child elements" &#8211; in plain English, it forces our balloons to be contained within it. Otherwise, when we position our green balloon to be <em>absolute</em>, it would go flying to its closest<em> non-static</em> parent, which may be an unintended div in your webpage, or the page itself!
 	
-						<br><br><em>Fixed</em> positioning is a bit easier to explain. Check out the sidebar on this page with the image of my beautiful face. The position of this div is <em>fixed</em>, meaning it's stuck there and I will be staring back at you forever.
+						<br><br><em>Fixed</em> positioning is a bit easier to explain. Check out the sidebar on this page containing links to my profiles on the web. The position of this div is <em>fixed</em>, meaning it is stuck there and will be staring back at you forever.
 						
-						<br><br>Go ahead, scroll. Yep...still here.
+						<br><br>Go ahead, scroll. Yep...still there.
 	
 						<br><br>If you would like to know how elements interact when positioned, or prefer an explanation without balloons and bins, check out <a href="http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" title="Absolute, Relative, Fixed Positioning: How Do They Differ?">this site</a>.
 	
