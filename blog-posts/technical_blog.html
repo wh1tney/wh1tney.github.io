@@ -79,14 +79,14 @@
 					SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). (<a href="http://en.wikipedia.org/wiki/SQL_injection" target="_blank" title="Wikipedia - SQL Injection">source</a>)
 					</div>
 					
-					<h4>What is it?</h4>
+					<h4>What is SQL injection?</h4>
 					SQL injection is a common web hack, typically used to gain access to a backend database. It is made possible as a result of an improperly coded website that allows SQL statements to be inserted into input fields, querying the database itself.
 					
 					<div class="note">SQL Injection vulnerabilities provide the means for a hacker to communicate directly to the database. (<a href="https://www.acunetix.com/websitesecurity/sql-injection" target="_blank" title="Acunetix">source</a>)</div>
 					
 					For example, a hacker could generate a SQL query to retrieve all usernames and passwords in a database. When this query is inserted into an input field, such as a login field in a web application, it can be executed and the hacker could gain access to what should be secure information. 
 					
-					<h4>How can we prevent it?</h4>
+					<h4>How can we prevent SQL injection?</h4>
 					SQL injection can be prevented by properly <em>sanitizing</em> data input. This means that the input is made invulnerable before being sent with the SQL query to the database. Before the query is sent to the database, it should be validated in some way. The <a href="http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php" target="_blank" title="StackOverflow - How can I prevent SQL-injection in PHP?">most popular response on StackOverflow</a> for preventing an attack is the following:
 					
 					<div class="note">Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters.</div>
