@@ -40,6 +40,27 @@
 		
 		<section>
 		
+			<div id="week8" class="post">
+				<h2>APIs</h2>
+				<div class="date">Posted Sunday July 6th, 2014</div>
+				API stands for <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. But what the heck does that mean? This post will scratch the mysterious surface of web APIs and why they are useful.
+				<br><br>
+				
+				<div class="note">
+					An application-programming interface (API) is a set of programming instructions and standards for accessing a Web-based software application or Web tool. A software company releases its API to the public so that other software developers can design products that are powered by its service.
+				</div>
+				OK enough with the formal definitions; what does this mean in the real world? Let's use Twitter as an example.
+				<br><br>
+				
+				Twitter is a web <strike>timesuck</strike> service that provides a lot of real-time information in the form of tweets. Twitter's database holds a wealth of information, including usernames, detailed information about users, follower counts, and tweet content. If you wish to build a brand new Twitter application, it would be non-trivial to <em>copy</em> and <em>store</em> all of this data &mdash; Twitter has <a href="https://about.twitter.com/company" title="About Twitter">over 255 million monthly active users</a>! I am sure you would prefer a way to access the data this service has already accumulated. Herein lies the power of a solid web API.
+			<br><br>
+			Twitter is one of the many web services that provides a <em>set of instructions</em> to access their data. These instructions can be abstracted into <a href="https://dev.twitter.com/docs/twitter-libraries" title="Twitter Libraries">any programming language</a>, from JavaScript to Perl. The fundamental set of instructions (regardless of language) <em>is</em> the API. Your only job as a developer is to follow these instructions, or <em>leverage the API</em>, within your code to properly access the data. Easy, right?
+			
+			<br><br>
+			Take a look at the <a href="https://github.com/sferik/twitter" title="A Ruby interface to the Twitter API">Ruby interface to the Twitter API</a>. It contains a library of instructions to compose a tweet, access a user profile, etc. This, and other APIs, provide extremely powerful ways to leverage the functionality of existing web services and the data they provide.
+				
+			</div>
+			
 			<div class="post">
 				<h2>Testing Ruby Methods</h2>
 				<div class="date">Posted Tuesday July 1st, 2014</div>
