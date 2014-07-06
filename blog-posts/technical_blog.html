@@ -46,17 +46,17 @@
 				API stands for <strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. But what the heck does that mean? This post will scratch the mysterious surface of web APIs and why they are useful.
 				
 				<div class="note">
-					An application-programming interface (API) is a set of programming instructions and standards for accessing a Web-based software application or Web tool. A software company releases its API to the public so that other software developers can design products that are powered by its service.
+					An application-programming interface (API) is a set of programming instructions and standards for accessing a Web-based software application or Web tool. A software company releases its API to the public so that other software developers can design products that are powered by its service. (<a href="http://money.howstuffworks.com/business-communications/how-to-leverage-an-api-for-conferencing1.htm" target="_blank" title="howstuffworks - what is an api?">source</a>)
 				</div>
 				OK enough with the formal definitions; what does this mean in the real world? Let's use Twitter as an example.
 				<br><br>
 				
-				Twitter is a web <strike>timesuck</strike> service that provides a lot of real-time information in the form of tweets. Twitter's database holds a wealth of information, including usernames, detailed information about users, follower counts, and tweet content. If you wish to build a brand new Twitter application, it would be non-trivial to <em>copy</em> and <em>store</em> all of this data &mdash; Twitter has <a href="https://about.twitter.com/company" title="About Twitter">over 255 million monthly active users</a>! I am sure you would prefer a way to access the data this service has already accumulated. Herein lies the power of a solid web API.
+				<a href="http://www.twitter.com" target="_blank" title="Twitter">Twitter</a> is a web <strike>timesuck</strike> service that provides a lot of real-time information in the form of tweets. Twitter's database holds a wealth of information, including usernames, detailed information about users, follower counts, and tweet content. If you wish to build a brand new Twitter application, it would be non-trivial to <em>copy</em> and <em>store</em> all of this data &mdash; Twitter has <a href="https://about.twitter.com/company" target="_blank" title="About Twitter">over 255 million monthly active users</a>! I am sure you would prefer a way to access the data this service has already accumulated. Herein lies the power of a solid web API.
 			<br><br>
-			Twitter is one of the many web services that provides a <em>set of instructions</em> to access their data. These instructions can be abstracted into <a href="https://dev.twitter.com/docs/twitter-libraries" title="Twitter Libraries">any programming language</a>, from JavaScript to Perl. The fundamental set of instructions (regardless of language) <em>is</em> the API. Your only job as a developer is to follow these instructions, or <em>leverage the API</em>, within your code to properly access the data. Easy, right?
+			Twitter is one of the many web services that provides a <em>set of instructions</em> to access their data. These instructions can be abstracted into <a href="https://dev.twitter.com/docs/twitter-libraries" target="_blank" title="Twitter Libraries">any programming language</a>, from JavaScript to Perl. The fundamental set of instructions (regardless of language) <em>is</em> the API. Your only job as a developer is to follow these instructions, or <em>leverage the API</em>, within your code to properly access the data. Easy, right?
 			
 			<br><br>
-			Take a look at the <a href="https://github.com/sferik/twitter" title="A Ruby interface to the Twitter API">Ruby interface to the Twitter API</a>. It contains a library of instructions to compose a tweet, access a user profile, etc. This, and other APIs, provide extremely powerful ways to leverage the functionality of existing web services and the data they provide.
+			Take a look at the <a href="https://github.com/sferik/twitter" target="_blank" title="A Ruby interface to the Twitter API">Ruby interface to the Twitter API</a>. It contains a library of instructions to compose a tweet, access a user profile, etc. This, and other APIs, provide extremely powerful ways to leverage the functionality of existing web services and the data they provide.
 				
 			</div>
 			
@@ -65,7 +65,7 @@
 				<div class="date">Posted Tuesday July 1st, 2014</div>
 				When writing tests in Ruby, we often check to see if a particular method is defined. 
 				
-				<br><br>Therefore, it is important to <a href="http://idratherbewindsurfing.net/2012/10/09/method_defined-vs-respond_to/" title="method_defined? vs respond_to?">understand the subtle difference</a> between <em>#method_defined?</em> and <em>#respond_to?</em>.
+				<br><br>Therefore, it is important to <a href="http://idratherbewindsurfing.net/2012/10/09/method_defined-vs-respond_to/" target="_blank" title="method_defined? vs respond_to?">understand the subtle difference</a> between <em>#method_defined?</em> and <em>#respond_to?</em>.
 				
 				<br><br>
 				You're welcome.
@@ -76,22 +76,22 @@
 				<div class="date">Posted Sunday June 29th, 2014</div>
 					<img src="images/xkcd.png" alt="xkcd comic">
 					<div class="note">
-					SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). (<a href="http://en.wikipedia.org/wiki/SQL_injection" title="Wikipedia - SQL Injection">source</a>)
+					SQL injection is a code injection technique, used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution (e.g. to dump the database contents to the attacker). (<a href="http://en.wikipedia.org/wiki/SQL_injection" target="_blank" title="Wikipedia - SQL Injection">source</a>)
 					</div>
 					
 					<h4>What is it?</h4>
 					SQL injection is a common web hack, typically used to gain access to a backend database. It is made possible as a result of an improperly coded website that allows SQL statements to be inserted into input fields, querying the database itself.
 					
-					<div class="note">SQL Injection vulnerabilities provide the means for a hacker to communicate directly to the database. (<a href="https://www.acunetix.com/websitesecurity/sql-injection" title="Acunetix">source</a>)</div>
+					<div class="note">SQL Injection vulnerabilities provide the means for a hacker to communicate directly to the database. (<a href="https://www.acunetix.com/websitesecurity/sql-injection" target="_blank" title="Acunetix">source</a>)</div>
 					
 					For example, a hacker could generate a SQL query to retrieve all usernames and passwords in a database. When this query is inserted into an input field, such as a login field in a web application, it can be executed and the hacker could gain access to what should be secure information. 
 					
 					<h4>How can we prevent it?</h4>
-					SQL injection can be prevented by properly <em>sanitizing</em> data input. This means that the input is made invulnerable before being sent with the SQL query to the database. Before the query is sent to the database, it should be validated in some way. The <a href="http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php" title="StackOverflow - How can I prevent SQL-injection in PHP?">most popular response on StackOverflow</a> for preventing an attack is the following:
+					SQL injection can be prevented by properly <em>sanitizing</em> data input. This means that the input is made invulnerable before being sent with the SQL query to the database. Before the query is sent to the database, it should be validated in some way. The <a href="http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php" target="_blank" title="StackOverflow - How can I prevent SQL-injection in PHP?">most popular response on StackOverflow</a> for preventing an attack is the following:
 					
 					<div class="note">Use prepared statements and parameterized queries. These are SQL statements that are sent to and parsed by the database server separately from any parameters.</div>
 										
-					For even more information on how to prevent SQL injection, check out <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet" title="SQL Injection Prevention Cheat Sheet">this cheat sheet</a>.
+					For even more information on how to prevent SQL injection, check out <a href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet" target="_blank" title="SQL Injection Prevention Cheat Sheet">this cheat sheet</a>.
 			</div>
 		
 			<div id="week6" class="post">
@@ -100,7 +100,7 @@
 				Since we have already covered <a href="#week5a">classes in Ruby</a> and <a href="#week4">skimmed the surface of Procs</a>, it is time to discuss blocks, Procs, and lambdas in more depth. Get ready to engage.
 				
 				<h4>Blocks</h4>
-				<div class="note">A Ruby block is just a bit of code that can be executed. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1" title="Codecademy Blocks">source</a>)</div>
+				<div class="note">A Ruby block is just a bit of code that can be executed. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1" target="_blank" title="Codecademy Blocks">source</a>)</div>
 				
 				Blocks of code can be used in Ruby to perform actions on data. Often, you will see blocks passed to method calls in order to operate on the receiver of the message. For example, if I want to <em>print my name</em> 10 times, I can pass instructions to <em>print my name</em> as a <strong>block</strong> to the Integer method <strong>times</strong> like so:
 				
@@ -121,7 +121,7 @@
  Because a block is not an object in Ruby, we need another way to <em>save</em> blocks of code to a variable. This is where Procs come in.
 				
 				<h4>Procs</h4>
-				<div class="note">You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/1/1" title="Codecademy Procs">source</a>)</div>
+				<div class="note">You can think of a proc as a "saved" block: just like you can give a bit of code a name and turn it into a method, you can name a block and turn it into a proc. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/1/1" target="_blank" title="Codecademy Procs">source</a>)</div>
 				
 				A Proc is a Ruby class that can be used to create objects that are just like blocks. Why is this useful? Well, it allows us to save these block-like objects to named variables which means we can use them multiple times throughout our code. Let's use our previous example of printing my name because you know you want to.
 				
@@ -130,7 +130,7 @@
 				<code class="prettyprint linenums">10.times(&say_my_name)</code>
 				<br>
 				
-				As you can see, we created a new Proc object and gave it a block as an argument. Now we have a named block of instructions to pass around, and an easy way to make our code resemble a <a href="https://www.youtube.com/watch?v=sQgd6MccwZc&feature=kp" title="Destiny's Child - Say My Name">Destiny's Child hit song</a>:
+				As you can see, we created a new Proc object and gave it a block as an argument. Now we have a named block of instructions to pass around, and an easy way to make our code resemble a <a href="https://www.youtube.com/watch?v=sQgd6MccwZc&feature=kp" target="_blank" title="Destiny's Child - Say My Name">Destiny's Child hit song</a>:
 				
 				<br><br>
 				<code class="prettyprint linenums">say_my_name = Proc.new { puts "Whitney" }</code>
@@ -141,7 +141,7 @@
 				(Note: <strong>&amp;</strong> is used to convert the proc object into a block before it is passed to a method that expects a block.)
 
 				<h4>Lambdas</h4>
-				<div class="note">[With] the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/1" title="Codecademy Blocks">source</a>)</div>
+				<div class="note">[With] the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/1" target="_blank" title="Codecademy Blocks">source</a>)</div>
 				
 				Essentially, lambdas and Procs are somewhat interchangeable. Rewriting our example code using lambdas would look like the following:
 				
@@ -152,7 +152,7 @@
 				
 				Did you try running the code above? Well, you should have because you will notice that it fails! The reason it fails is due to a distinct difference between Procs and lambdas.
 				
-				<div class="note">[A] lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" title="Codecademy Lambdas">source</a>)</div>
+				<div class="note">[A] lambda will throw an error if you pass it the wrong number of arguments, whereas a proc will ignore unexpected arguments and assign nil to any that are missing. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" target="_blank" title="Codecademy Lambdas">source</a>)</div>
 				
 				Running the code above throws an error because when we call the <strong>times</strong> method with a block of code, we are actually passing the current iteration (1-10) to that block. If we do not account for this argument in our lambda, it will raise an <em>ArgumentError</em> (which would not happen if we used a Proc object). Our lambda should catch this argument and look more like the following:
 
@@ -163,7 +163,7 @@
 				
 				Ah, that's better. But there is one more distinct difference between a Proc object and a lambda that we have not yet discussed.
 				
-				<div class="note">[When] a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" title="Codecademy Lambdas">source</a>)</div>
+				<div class="note">[When] a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method. (<a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/2/3" target="_blank" title="Codecademy Lambdas">source</a>)</div>
 
 				Let's see this in action by quoting <a href="http://en.wikipedia.org/wiki/Shaft_(1971_film)" target="_blank" title="Wikipedia - Shaft">Shaft</a> and using the <a href="http://www.ruby-doc.org/core-2.1.2/Proc.html#method-i-call" target="_blank" title="Ruby Docs - Proc#call">call</a> method with both Proc objects and lambdas.
 				
@@ -317,11 +317,11 @@
 				<div class="note">
 				Where there's food, there's a real world model for Ruby classes.
 				</div>
-					<a href="http://offthegridsf.com/" title="offthegridsf.com">Off The Grid SF</a> is an experience that brings street food vendors and the communities they serve together in the city of San Francisco. Vendors prepare and sell food from full-service trucks, delighting foodies and wanderers alike with everything from kabobs to burritos to organic ice cream.
+					<a href="http://offthegridsf.com/" target="_blank" title="offthegridsf.com">Off The Grid SF</a> is an experience that brings street food vendors and the communities they serve together in the city of San Francisco. Vendors prepare and sell food from full-service trucks, delighting foodies and wanderers alike with everything from kabobs to burritos to organic ice cream.
 					<br><br>Let's examine the Off The Grid experience and model it using Ruby <strong>classes</strong>. 
 					
 					<br><br>
-					We will start by modeling a portion of Off the Grid, a collection of several different food trucks (there are actually <a href="http://offthegridsf.com/vendors#food" title="Vendors-Food">over 150</a> OTG food vendors):
+					We will start by modeling a portion of Off the Grid, a collection of several different food trucks (there are actually <a href="http://offthegridsf.com/vendors#food" target="_blank" title="Vendors-Food">over 150</a> OTG food vendors):
 					
 					<div class="parking-lot">
 						<div class="truck">
@@ -453,11 +453,11 @@
 					
 				<div class="note">array_of_strings = array.map(&:to_s)</div>
 				
-				At first, heads exploded. What the heck is that pretzel colon thingy? To understand this gibberish requires a basic understanding of the JavaScript method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map" title="RubyDocs">map</a></strong>.
+				At first, heads exploded. What the heck is that pretzel colon thingy? To understand this gibberish requires a basic understanding of the JavaScript method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map" target="_blank" title="RubyDocs">map</a></strong>.
 				<div class="note">map { |item| block } → new_ary</div>
 				<div class="note">The builtin method <strong>map</strong> is an instance method for Ruby arrays and hashes. In this post, we will be referring to the method that operates on arrays.</div>
 				
-				An array object calls map, which says "hey, gimme a block of code and I will execute it on every element in this array." It iterates through each item in the array, executing the code in the block and storing the new value of the item in a brand new array (if we don't want to create a new array, but simply wish to modify the old one, we would use destructive method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map-21" title="RubyDocs">map!</a></strong> with <strong>!</strong> on the end).
+				An array object calls map, which says "hey, gimme a block of code and I will execute it on every element in this array." It iterates through each item in the array, executing the code in the block and storing the new value of the item in a brand new array (if we don't want to create a new array, but simply wish to modify the old one, we would use destructive method <strong><a href="http://www.ruby-doc.org/core-2.1.2/Array.html#method-i-map-21" target="_blank" title="RubyDocs">map!</a></strong> with <strong>!</strong> on the end).
 							
 				<br><br>
 				So what about that cryptic code from earlier?
@@ -471,13 +471,13 @@
 				
 				<div class="note">array_of_strings = array.map(&:to_s.to_proc)</div>
 				
-				Here we have the method <strong><a href="http://www.ruby-doc.org/core-1.9.3/Symbol.html#method-i-to_proc" title="RubyDocs (to_proc)">to_proc</a></strong> being called on the symbol <strong>:to_s</strong>. This method returns a Proc object, which (for the brevity of this post) is just a block of Ruby code that performs specific operations. For example, the code `:to_s.to_proc` shown above returns <strong>a block of code that converts given input to a string</strong>. Our handy unary ampersand operator then says "great! now run this block of code on every item in the list." And it does.
+				Here we have the method <strong><a href="http://www.ruby-doc.org/core-1.9.3/Symbol.html#method-i-to_proc" target="_blank" title="RubyDocs (to_proc)">to_proc</a></strong> being called on the symbol <strong>:to_s</strong>. This method returns a Proc object, which (for the brevity of this post) is just a block of Ruby code that performs specific operations. For example, the code `:to_s.to_proc` shown above returns <strong>a block of code that converts given input to a string</strong>. Our handy unary ampersand operator then says "great! now run this block of code on every item in the list." And it does.
 				
 				<br><br>
 				Smells a lot like the regular map method, with a little syntactic sugar, huh? That's because it is. Please use and enjoy.
 				
 				<br><br>
-				Refer to <a href="http://stackoverflow.com/questions/1217088/what-does-mapname-mean-in-ruby" title="StackOverflow">this post</a> for more information.
+				Refer to <a href="http://stackoverflow.com/questions/1217088/what-does-mapname-mean-in-ruby" target="_blank" title="StackOverflow">this post</a> for more information.
 			</div>
 	
 	
@@ -567,7 +567,7 @@
 						
 						<br><br>Go ahead, scroll. Yep...still there.
 	
-						<br><br>If you would like to know how elements interact when positioned, or prefer an explanation without balloons and bins, check out <a href="http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" title="Absolute, Relative, Fixed Positioning: How Do They Differ?">this site</a>.
+						<br><br>If you would like to know how elements interact when positioned, or prefer an explanation without balloons and bins, check out <a href="http://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/" target="_blank" title="Absolute, Relative, Fixed Positioning: How Do They Differ?">this site</a>.
 	
 			</div>
 	
@@ -578,7 +578,7 @@
 				<div>
 					<a href="http://www.soundcloud.com" title="SoundCloud" target="_blank"><img class="logo" src="images/soundcloud.png" alt="SoundCloud"></a><br>
 					I am on SoundCloud 78% of all waking hours. 86% of open browser tabs are new SoundCloud music discoveries.
-					I even curate a <a href="http://www.thunderhustle.com" title="Click Here Right Now For Amazingly Dope Playlists Full of Magical Sounds!!!">music blog</a> of crazy good SoundCloud playlists.<br>
+					I even curate a <a href="http://www.thunderhustle.com" target="_blank" title="Click Here Right Now For Amazing Playlists Full of Magical Sounds!!!">music blog</a> of crazy good SoundCloud playlists.<br>
 					But let's talk about design and UX.<br><br>
 					I love the SoundCloud design. It could use moar orange.<br>
 					But the layout (navigation) of the site is simple and I love simple UI.<br><br>
@@ -586,23 +586,23 @@
 					Each tab on the profile settings page annoyingly opens in a new window.<br>
 					Logging out of a user account on one browser tab subsequently logs the user out of ALL OPEN TABS.<br>
 					It makes me want to cry.<br>
-					Does any of that make sense? No? OK, on to <a href="http://www.twitter.com/wjoba" title="Pay No Attention to These Tweets" target="_blank">Twitter</a>.<br>
+					Does any of that make sense? No? OK, on to <a href="http://www.twitter.com/wjoba" target="_blank" title="Pay No Attention to These Tweets">Twitter</a>.<br>
 					
-					<a href="http://www.twitter.com" title="Twitter" target="_blank"><img class="logo" src="images/twitter.png" alt="Twitter"></a>
+					<a href="http://www.twitter.com" target="_blank" title="Twitter"><img class="logo" src="images/twitter.png" alt="Twitter"></a>
 	
 						Who doesn't love The Twitter?<br><br>
 						The website is aesthetically appealing, easy to navigate, and is starting to look like Facebook...<br>
-						which is great for <a href="https://twitter.com/wjoba/status/468161930465529856" title="The Book of Faces" target="_blank">people who don't use Facebook.</a><br><br>
+						which is great for <a href="https://twitter.com/wjoba/status/468161930465529856" target="_blank" title="The Book of Faces">people who don't use Facebook.</a><br><br>
 						The UX is great, by sheer design of the service.<br>
 						You can only accomplish an average of 5 useful things when using Twitter, which makes for a dead simple user experience.<br><br>
 						Also, infinite scroll, ftw. I still gotta figure out how that works. AJAX?
 					
-					<a href="http://www.quora.com" title="Quora" target="_blank"><img class="logo" src="images/quora.jpg" alt="Quora"></a>
+					<a href="http://www.quora.com" target="_blank" title="Quora"><img class="logo" src="images/quora.jpg" alt="Quora"></a>
 					
-						Quora. Because it is important to know <a href="http://www.quora.com/Life/How-is-chess-similar-to-life" title"Hint: They are both hard." target="_blank">how life is similar to a game of chess.</a><br><br>
+						Quora. Because it is important to know <a href="http://www.quora.com/Life/How-is-chess-similar-to-life" target="_blank" title"Hint: They are both hard.">how life is similar to a game of chess.</a><br><br>
 						Quora is for asking and answering questions, both trivial and life-changing.<br>
 						There are subtle things about the design and user experience that make this obvious, e.g.<br>
-						when the site is launched, the cursor is already neatly placed in the search box like <a href="http://www.google.com" title="NSA. Just Kidding." target="_blank">Google.</a><br><br>
+						when the site is launched, the cursor is already neatly placed in the search box like <a href="http://www.google.com" target="_blank" title="NSA. Just Kidding.">Google.</a><br><br>
 						Cool.<br><br>
 						Again, simplicity. I swear by it. And this site definitely has it.<br>
 						The design eliminates the unnecessary and makes it really easy to perform basic functions<br>
