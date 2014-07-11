@@ -19,8 +19,14 @@ ul {
 }
 
 img {
-	margin:auto;
+	margin:0 auto;
 	max-width:100%;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 figcaption {
