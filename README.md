@@ -1,7 +1,7 @@
 [wh1tney.github.io](http://wh1tney.github.io)
 =================
 
-This site and the blog in /blog-posts was built to learn:
+This site and the blog in /blog-posts were built to learn:
 
 - Git (basics)
 - GitHub (deploying a static website)
